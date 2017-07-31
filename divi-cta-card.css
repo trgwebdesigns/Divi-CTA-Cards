@@ -1,0 +1,380 @@
+/* TRG Divi CTA Cards */
+.trg-cta-card {
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 300px;  /* Set to your preference */
+  padding: 0;
+  -webkit-transition: all 0.3s;
+  -kthtml-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: 10px !important;
+}
+.trg-cta-card .et_pb_promo_description {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.trg-cta-card h2 {
+  margin-top: 0;
+}
+
+.trg-wrap-container .et_pb_button,
+.trg-cta-card .et_pb_promo_button.et_pb_button,
+.trg-cta-card .et_pb_promo_button.et_pb_button:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  border: 0 !important;
+  background: transparent !important;
+  color: transparent !important;
+  z-index: 9999;
+}
+.trg-cta-card:hover {
+  opacity: 0.8;
+}
+
+/* TRG CTA Cards - Title on Bottom */
+.cta-title-bottom ~ .et_pb_promo_description h2,
+.cta-title-bottom h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 0, 0, 0.8); /* Set to your preference */
+  padding: 5px;
+  line-height: 1.5em;
+  margin: 0;
+}
+.cta-title-bottom .et_pb_promo_description {
+  padding-bottom: 50px;
+}
+
+/* TRG CTA Cards - Title on Top */
+.cta-title-top ~ .et_pb_promo_description h2,
+.cta-title-top h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 0, 0, 0.8); /* Set to your preference */
+  padding: 5px;
+  line-height: 1.5em;
+}
+
+/* TRG CTA Cards - Title on Left */
+.cta-title-left ~ .et_pb_promo_description h2,
+.cta-title-left h2 {
+  position: absolute;
+  top: 66%;
+  left: 0;
+  width: 75%;
+  text-align: center;
+  background: rgba(20, 75, 255, 0.6); /* Set to your preference */
+  padding: 5px;
+  line-height: 1.5em;
+}
+.cta-title-left ~ .et_pb_promo_description,
+.cta-title-left .et_pb_promo_description {
+  padding-top: 40px !important;
+  text-align: right !important;
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: start !important;
+}
+
+/* TRG CTA Cards - Overlay */
+.trg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;  /* Set overlay background color to your preference */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in-out;
+  opacity: 0;
+}
+.trg-overlay-container:hover .trg-overlay {
+  opacity: 0.8;
+}
+.trg-overlay .overlay-content {
+  white-space: nowrap;
+  color: #ff2814; /* Set icon color to your preference */
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.trg-overlay .overlay-content::before {
+  content: "\e050"; /* Set icon to your preference -- Google Divi Icon Font for choices */
+  line-height: 2em;
+  font-size: 30px;
+  font-family: "ETmodules";
+}
+
+/* TRG CTA Cards - Overlay containing button */
+.trg-wrap-container:hover .trg-overlay,
+.overlay-button.trg-overlay-container:hover,
+.overlay-button.trg-overlay-container:hover .trg-overlay {
+  opacity: 1;
+}
+.overlay-button .trg-overlay {
+  background-color: transparent;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.overlay-button.trg-overlay-container:hover .trg-overlay{
+  top: 25%;
+}
+.overlay-button .trg-overlay .overlay-content::before {
+  content: "Learn More";  /* Set button text to your preference */
+  display: inline-block;
+  line-height: 1.7em;
+  font-family: "Droid Sans",Helvetica,Arial,Lucida,sans-serif; /* Set button font to your preference */
+  color: #fff;  /* Set button text color to your preference */
+  border: 2px solid #fff; /* Set button border to your preference */
+  background-color: rgba(20, 255, 20, 0.6); /* Set button background color to your preference */
+  padding: 10px;
+  width: 150px; /* You may need to adjust this based on length of button text */
+  font-size: 20px;
+}
+.overlay-button .et_pb_promo_description {
+  padding-bottom: 100px;
+}
+
+/* Decription appears on hover */
+.hover-description ~ .et_pb_promo_description,
+.hover-description .et_pb_promo_description {
+  color: transparent !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.hover-description h2 {
+  color: #fff;
+}
+.trg-wrap-container:hover .hover-description ~ .et_pb_promo_description,
+.hover-description:hover .et_pb_promo_description {
+  color: #fff !important; /* Set color of text in description to your preference */
+}
+.hover-description:hover {
+  opacity: 1;
+}
+
+/* Shrink on hover */
+.hover-shrink {
+  -webkit-transition: all 0.3s ease-in-out;
+  -kthtml-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.hover-shrink:hover {
+  -webkit-transform: scale(0.96);
+  transform: scale(0.96);
+  -webkit-transition: all 0.3s ease-in-out;
+  -kthtml-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Grow on hover */
+.hover-grow {
+  -webkit-transition: all 0.3s ease-in-out;
+  -kthtml-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.hover-grow:hover {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+  -webkit-transition: all 0.3s ease-in-out;
+  -kthtml-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Change background color on hover */
+.hover-background {
+  -webkit-transition: background 0.3s;
+  -kthtml-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.hover-background:hover {
+  -webkit-transition: background 0.3s;
+  -kthtml-transition: background 0.3s;
+  transition: background 0.3s;
+  background-color: #ff2814 !important; /* change to your preference */
+  opacity: 1;
+}
+
+/* Change border color on hover */
+.hover-border {
+  -webkit-transition: border 0.3s;
+  -kthtml-transition: border 0.3s;
+  transition: border 0.3s;
+  border: 0;
+}
+.hover-border:hover {
+  -webkit-transition: border 0.3s;
+  -kthtml-transition: border 0.3s;
+  transition: border 0.3s;
+  border: 10px solid #ff2814 !important; /* Change to your preference */
+  opacity: 1;
+}
+
+/* Wrap the CTA Module in a container and move description to new parent */
+.trg-wrap-container {
+	height: 100%;
+	width: 100%;
+  max-height: 300px;
+	overflow: hidden;
+  position: relative;
+}
+.trg-wrap-container .et_pb_promo_description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  color: #fff; /* Set to your preference */
+  text-align: center;
+  z-index: 1;
+}
+.trg-wrap-container .et_pb_promo_description h2 {
+  color: #fff; /* Set to your preference */
+  margin: 0
+}
+
+/* TRG CTA Polaroid-StyleCards */
+.cta-polaroid {
+  background-color: #fff !important;
+  border: 10px solid #fff;
+}
+.cta-polaroid ~ .et_pb_promo_description h2,
+.cta-polaroid h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.5em;
+  color: #222;
+  background-color: #fff;
+  margin-bottom: 0;
+}
+.polaroid.et_pb_promo_description {
+  padding-bottom: 50px;
+}
+
+/* Blur the background and sharpen on hover */
+.hover-sharpen-bg {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.hover-sharpen-bg {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+.trg-wrap-container:hover .hover-sharpen-bg {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+/* Zoom in the background on hover */
+.hover-zoom-in-bg {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+.trg-wrap-container:hover .hover-zoom-in-bg {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Zoom out the background on hover */
+.hover-zoom-out-bg {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.trg-wrap-container:hover .hover-zoom-out-bg {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Make the background image black and while and show color on hover */
+.hover-color-bg {
+  -webkit-transition: all 1.0s;
+  transition: all 1.0s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.trg-wrap-container:hover .hover-color-bg {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: none;
+  filter: none;
+}
+
+/* AJAX Style Spinner*/
+.trg-spinner-container {
+  background-color: transparent !important;
+  background-size: cover !important;
+  border: none;
+  color: transparent !important;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 1;
+  filter: alpha(opacity=1);
+}
+.trg-spinner-container:before {
+  content: url('images/double-spinner.svg');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
